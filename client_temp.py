@@ -20,8 +20,9 @@ def fetch_weather_data(city):
     c.close()
     return json.loads(rec_data)
 
+#Fetching weather icon 
 def download_icon(icon_code):
-    icon_url = f"http://openweathermap.org/img/wn/{icon_code}.png"
+    icon_url = f"http://openweathermap.org/img/wn/{icon_code}.png" 
     response = requests.get(icon_url)
     if response.status_code == 200:
         img_data = response.content
