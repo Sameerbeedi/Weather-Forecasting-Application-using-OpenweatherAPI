@@ -1,6 +1,5 @@
-===================================================================================
-			                  WEATHER FORECASTING APPLICATION
-===================================================================================
+WEATHER FORECASTING APPLICATION
+
 
 This is a client-server application which fetches weather data from the OpenWeatherAPI. The client enters a city, and sends the city name to the server, and the 
 server fetches weather data for that city and sends it to the client. The server sends the current weather data, and the weather data for the next 5 days. The client 
