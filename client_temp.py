@@ -9,9 +9,8 @@ from tkinter import ttk
 
 
 # Import the SSL context from the server code
-# Replace the path with the actual location of your server's SSL context file
 ssl_context = ssl.create_default_context(ssl.Purpose.CLIENT_AUTH)
-ssl_context.load_cert_chain(certfile=r"D:\college\sem4\CN\mini_project\server.crt", keyfile=r"D:\college\sem4\CN\mini_project\server.key")
+ssl_context.load_cert_chain(certfile=r"D:\college\sem4\CN\mini_project\server.crt", keyfile=r"D:\college\sem4\CN\mini_project\server.key") # Replace the path with the actual location of your server's SSL context file
 
 def fetch_weather_data(city):
     c = socket.socket()
