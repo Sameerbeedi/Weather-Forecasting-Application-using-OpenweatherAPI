@@ -7,7 +7,7 @@ from datetime import datetime, timedelta
 
 # Generate SSL certificate
 ssl_context = ssl.create_default_context(ssl.Purpose.CLIENT_AUTH)
-ssl_context.load_cert_chain(certfile=r"D:\college\sem4\CN\mini_project\server.crt", keyfile=r"D:\college\sem4\CN\mini_project\server.key")
+ssl_context.load_cert_chain(certfile=r"D:\college\sem4\CN\mini_project\server.crt", keyfile=r"D:\college\sem4\CN\mini_project\server.key") #Replace path with the path the file is stored in your pc
 
 
 
