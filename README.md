@@ -8,7 +8,7 @@ extracts the data for the morning and evening for the next 5 days, and the curre
 Instructions for running the application:
 
 1. Server
-	-Run the server.py program to start the server\n
+	-Run the server.py program to start the server
 	-Ensure that the necessary SSL files are in the server pc and the correct path is in the program.
 	-The server is now listening for connections on 'localhost' and port 12000. If you want to change the port, make sure that the client is connected to the same port.
 	-Ensure that the server pc has an active internet connection to fetch weather data from the API
