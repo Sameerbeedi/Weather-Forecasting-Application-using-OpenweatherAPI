@@ -14,7 +14,7 @@ ssl_context.load_cert_chain(certfile=r"D:\college\sem4\CN\mini_project\server.cr
 
 def fetch_weather_data(city):
     c = socket.socket()
-    c.connect(('localhost', 12000))
+    c.connect(('localhost', 12000)) #Enter the IP address of the host here, replace the localhost with the correct IP Address.
     c.send(bytes(city, 'utf-8'))
     rec_data = c.recv(20480).decode()
     c.close()
