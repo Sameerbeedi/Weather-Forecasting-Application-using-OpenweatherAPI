@@ -44,7 +44,7 @@ def display_weather_info():
         icon_label_current.grid(row=1, column=0)
         icon_label_current.image = icon_image_current
     # Display current weather information
-    current_weather_label.config(text=f"Current Weather: {current_date}: {current_weather['weather'][0]['description'].capitalize()}  Temp: {current_weather['main']['temp']} °C")
+    current_weather_label.config(text=f"Current Weather: {current_date}: {current_weather['weather'][0]['description'].capitalize()}  Temp: {current_weather['main']['temp_min']} °C/{current_weather['main']['temp_max']} Wind Speed: {current_weather['wind']['speed']} km/h  Humidity: {current_weather['main']['humidity']}  g/m3")
     current_weather_label.grid(row=1,column=1)
     # Extract and display forecasted weather data for the next 5 days
     forecast_weather_label.config(text="Forecasted Weather:")
@@ -61,7 +61,7 @@ def display_weather_info():
                 icon_label = tk.Label(root, image=icon_image, bg="white")
                 icon_label.grid(row=r, column=c)
                 icon_label.image = icon_image
-            label_text = f"{date}: {entry['weather'][0]['description'].capitalize()}  Temp: {entry['main']['temp']} °C Time: {entry['dt_txt'][11:]}"
+            label_text = f"{date}: {entry['weather'][0]['description'].capitalize()}  Temp: {entry['main']['temp_min']} °C/{entry['main']['temp_max']} °C    Wind Speed:{entry['wind']['speed']} m/s  Humidity: {entry['main']['humidity']}  g/m3  Time: {entry['dt_txt'][11:]}"
             label = tk.Label(root, text=label_text, bg="white", fg="black")
             label.grid(row=r, column=c+1)
             r += 1
