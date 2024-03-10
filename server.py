@@ -1,15 +1,12 @@
-import ssl
-import requests
 import socket
-
+import ssl
 import json
 from datetime import datetime, timedelta
+import requests
 
 # Generate SSL certificate
 ssl_context = ssl.create_default_context(ssl.Purpose.CLIENT_AUTH)
-ssl_context.load_cert_chain(certfile=r"D:\college\sem4\CN\mini_project\server.crt", keyfile=r"D:\college\sem4\CN\mini_project\server.key") #Replace path with the path the file is stored in your pc
-
-
+ssl_context.load_cert_chain(certfile=r"C:\code\cn\server.crt", keyfile=r"C:\code\cn\server.key")
 
 # Create a TCP socket object using the imported alias
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
