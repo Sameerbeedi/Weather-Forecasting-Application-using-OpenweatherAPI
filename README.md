@@ -13,7 +13,8 @@ Creating a GUI using Tkinter for user interaction.
 Sending the city name to the server when requested by the user.
 Receiving and displaying current weather data and the 5-day forecast from the server.
 Extracting morning and evening weather data for the next 5 days.
-3. Dependencies
+
+Dependencies
 Ensure that the following Python libraries are installed:
 
 tkinter: For GUI components.
@@ -27,7 +28,7 @@ Clone the repository to your local machine:
 
 bash
 Copy code
-git clone https://github.com/YourRepo/Weather-Forecasting-App.git
+git clone https://github.com/Sameerbeedi/Weather-Forecasting-Application-using-OpenweatherAPI/tree/main.git
 Navigate to the project directory:
 
 bash
