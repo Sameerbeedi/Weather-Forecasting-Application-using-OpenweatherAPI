@@ -1,54 +1,13 @@
-Weather Forecasting Application
-1. server.py
-This script handles the server-side logic, including:
+WEATHER FORECASTING APPLICATION
 
-Setting up a secure connection using SSL.
-Listening for client requests on a specified port.
-Fetching weather data from the OpenWeatherAPI based on the city name received from the client.
-Sending current weather data and a 5-day forecast back to the client.
-2. client.py
-This script manages the client-side user interface and communication, including:
+This is a client-server application which fetches weather data from the OpenWeatherAPI. The client enters a city, and sends the city name to the server, and the server fetches weather data for that city and sends it to the client. The server sends the current weather data, and the weather data for the next 5 days. The client extracts the data for the morning and evening for the next 5 days, and the current weather data.
 
-Creating a GUI using Tkinter for user interaction.
-Sending the city name to the server when requested by the user.
-Receiving and displaying current weather data and the 5-day forecast from the server.
-Extracting morning and evening weather data for the next 5 days.
+Instructions for running the application:
 
-Dependencies
-Ensure that the following Python libraries are installed:
+Server -Run the server.py program to start the server -Ensure that the necessary SSL files are in the server pc and the correct path is in the program. -The server is now listening for connections on 'localhost' and port 12000. If you want to change the port, make sure that the client is connected to the same port. -Ensure that the server pc has an active internet connection to fetch weather data from the API
 
-tkinter: For GUI components.
-requests: For making HTTP requests to the OpenWeatherAPI.
-json: For parsing the JSON data received from the API request.
-datetime: For handling date and time in the weather data.
-ssl: For SSL certificate handling.
-socket: For network communication.
-How to Run the Project
-Clone the repository to your local machine:
+Client -In the fetch_weather function, replace 'localhost' with the IP address of the server. -Run the program. -Enter the city for which you want to fetch weather data. -Click on the "Fetch Weather" button. -The current weather and the weather for the next 5 days is displayed.
 
-bash
-Copy code
-git clone https://github.com/Sameerbeedi/Weather-Forecasting-Application-using-OpenweatherAPI/tree/main.git
-Navigate to the project directory:
+Dependencies: -Python 3.x -tkinter: for GUI components -requests: for making HTTP requests to the OpenWeathermap API -json: for parsing the JSON data received from the API request -datetime: for working on the json object and displaying the weather info for a specific date -ssl: for SSL certificate handling -socket: for network communication
 
-bash
-Copy code
-cd Weather-Forecasting-App
-Run the server:
-
-bash
-Copy code
-python server.py
-Ensure that the necessary SSL files are present on the server machine and the correct paths are set in the program.
-Make sure the server is listening on the desired port (default: 12000) and has an active internet connection.
-Run the client:
-
-bash
-Copy code
-python client.py
-In the fetch_weather function, replace 'localhost' with the server's IP address.
-Enter the city name for which you want to fetch weather data and click "Fetch Weather."
-Note
-Replace the API key in server.py with an active OpenWeatherAPI key.
-Ensure that the port number in the client matches the server's port number.
-Replace the SSL filenames with the actual file names and provide the correct paths.
+Note: i)Ensure that you have an active internet connection. ii)Replace 'localhost' with the IP Address of the server in the client and ensure that the port number in the client is the same as the port number in the server. iii)Replace the 'server.crt' and the 'server.key' filenames with their actual file names and put the correct path. iv)Replace the API Key with an active API key.
